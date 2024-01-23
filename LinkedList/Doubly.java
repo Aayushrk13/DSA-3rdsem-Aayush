@@ -1,4 +1,7 @@
 package LinkedList;
+
+import java.util.Scanner;
+
 class Node{
     int data;
     Node nextaddress;
@@ -99,6 +102,7 @@ class Doublylinkedlist{
         temp1=temp.prevaddress;
         temp2=temp.nextaddress;
         temp1.nextaddress=temp2;
+        temp2.prevaddress=temp1;
         temp=null;
 
     }
@@ -123,15 +127,68 @@ class Doublylinkedlist{
 }
 
 public class Doubly {
+    Scanner scan=new Scanner(System.in);
     public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
         Doublylinkedlist dl=new Doublylinkedlist();
-        dl.insertatfirst(3);
-        dl.insertatfirst(2);
-        dl.insertatfirst(1);
-        dl.insertatlast(5);
-        dl.insertatspecificpos(10, 2);
-        dl.display();
-        dl.deleteatspecific(6);
-        dl.display();
+        Doubly d=new Doubly();
+        int choice=0;
+        while (choice !=9) {
+            System.out.println("Doubly Linkec list");
+            System.out.println("1.Insert at first");
+            System.out.println("2.Insert at Last.");
+            System.out.println("3.Insert at specific position.");
+            System.out.println("4.Delete at first.");
+            System.out.println("5.Delete at last.");
+            System.out.println("6.Delete at specific position.");
+            System.out.println("7.Print the list from front.");
+            System.out.println("8.Print the list from back.");
+            System.out.println("9.Exit");
+            System.out.println("Enter your choice:");
+            choice=scan.nextInt();
+            switch (choice) {
+                case 1:
+                    dl.insertatfirst(d.input());
+                    break;
+                
+                case 2:
+                    dl.insertatlast(d.input());
+                break;
+                case 3:
+                    dl.insertatspecificpos(d.input(), d.position());
+                break;
+                case 4:
+                    dl.deleteatfirst();
+                break;
+                case 5:
+                    dl.deleteatlast();
+                break;
+                case 6:
+                    dl.deleteatspecific(d.position());
+                break;
+                case 7:
+                    dl.display();
+                break;
+                case 8:
+                    dl.printback();
+                break;
+                case 9:
+                break;
+                default:
+                System.out.println("Invalid choice.");
+                    break;
+            }
+        }
+        scan.close();
+    }
+    int input(){
+        System.out.println("Enter the data:");
+        int data=scan.nextInt();
+        return data;
+    }
+    int position(){
+        System.out.println("Enter the position:");
+        int pos=scan.nextInt();
+        return pos;
     }
 }

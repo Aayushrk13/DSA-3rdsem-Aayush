@@ -11,6 +11,5 @@ public class Fibonacci {
     public static void main(String[] args) {
         Fibonacci f=new Fibonacci();
         System.out.println(f.fibonacci(5));
-asdasdasd
     }
 }

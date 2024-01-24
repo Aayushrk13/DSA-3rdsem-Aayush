@@ -6,6 +6,7 @@ public class StackImplmentationUsingArray{
     public StackImplmentationUsingArray(){
         array=new int [array_size];
         this.top=-1;
+        //this is stack
     }
     public void push(int value){
         if(top>=array_size){

@@ -15,6 +15,7 @@ class Circularlinkedlist{
             temp=temp.nextaddress;
         }
         temp.nextaddress=head;
+        System.out.println(temp.nextaddress);
     }
     public void insertatfirst(int data){
         Node newNode=new Node(data);
@@ -35,10 +36,26 @@ class Circularlinkedlist{
                 temp=temp.nextaddress;
             }
             temp.nextaddress=newNode;
+            System.out.println(head);
         }   
     }
-    public void insertatspecific(){
-
+    public void insertatspecific(int data, int pos){
+        Node newNode=new Node(data);
+        Node temp1=head;
+        if(pos==1){
+            insertatfirst(data);
+        }else{
+            Node temp=head;
+            while (--pos!=0) {
+                if (pos==1) {
+                    temp1=temp.nextaddress;
+                    temp.nextaddress=newNode;
+                    newNode.nextaddress=temp1;
+                    break;
+                }
+                temp=temp.nextaddress;
+            }
+        }
     }
     public void deleteatfirst(){
 
@@ -64,7 +81,9 @@ public class Circular{
         cl.insertatfirst(3);
         cl.insertatfirst(2);
         cl.insertatfirst(1);
+        cl.insertatlast(4);
         cl.atlast();
+        cl.insertatspecific(5, 4);
         cl.print();
     }
 }

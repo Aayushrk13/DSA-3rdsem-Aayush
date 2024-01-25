@@ -1,4 +1,4 @@
-package Practice;
+package LinkedList;
 import java.util.*;
 class Node{
     int data;

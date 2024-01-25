@@ -58,7 +58,7 @@ class Circularlinkedlist{
         }
     }
     public void deleteatfirst(){
-          
+          //asdasd
     }
     public void deleteatlast(){
 

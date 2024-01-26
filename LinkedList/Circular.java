@@ -30,9 +30,11 @@ class Circularlinkedlist{
         Node newNode=new Node(data);
         if(head==null){
             head=newNode;
+            newNode.nextaddress=head;
         }else{
             Node temp=head;
-            while (temp.nextaddress!=null) {
+            atlast();
+            while (temp.nextaddress!=head) {
                 temp=temp.nextaddress;
             }
             temp.nextaddress=newNode;
@@ -58,7 +60,7 @@ class Circularlinkedlist{
         }
     }
     public void deleteatfirst(){
-          //asdasd merge with main
+        
     }
     public void deleteatlast(){
 
@@ -81,9 +83,6 @@ public class Circular{
         cl.insertatfirst(3);
         cl.insertatfirst(2);
         cl.insertatfirst(1);
-        cl.insertatlast(4);
-        cl.atlast();
-        cl.insertatspecific(5, 4);
         cl.print();
     }
 }

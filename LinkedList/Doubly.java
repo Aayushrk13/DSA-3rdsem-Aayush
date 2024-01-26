@@ -114,6 +114,7 @@ class Doublylinkedlist{
         }
         System.out.println();
     }
+    
     public void printback(){
         Node temp=head;
         while(temp.nextaddress!=null){

@@ -2,20 +2,20 @@ package LinkedList;
 
 import java.util.Scanner;
 
-class Node{
+class Node1{
     int data;
-    Node nextaddress;
-    Node prevaddress;
-    public Node(int data){
+    Node1 nextaddress;
+    Node1 prevaddress;
+    public Node1(int data){
         this.data=data;
         this.nextaddress=null;
         this.prevaddress=null;
     }
 }
 class Doublylinkedlist{
-    Node head=null;
+    Node1 head=null;
     public void insertatfirst(int data){
-        Node newNode=new Node(data);
+        Node1 newNode=new Node1(data);
         if(head==null){
             head=newNode;
         }else{
@@ -26,11 +26,11 @@ class Doublylinkedlist{
     }
     
     public void insertatlast(int data){
-        Node temp=head;
+        Node1 temp=head;
         if(temp==null){
             insertatfirst(data);
         }else{
-            Node newNode=new Node(data);
+            Node1 newNode=new Node1(data);
             while (temp.nextaddress!=null) {
                 temp=temp.nextaddress;
             }
@@ -39,14 +39,14 @@ class Doublylinkedlist{
         }
     }
     public void insertatspecificpos(int data,int pos){
-        Node temp=head;
-        Node temp1;
+        Node1 temp=head;
+        Node1 temp1;
         if(temp==null){
             insertatfirst(data);
         }else{
             while (pos--!=0) {
                 if(pos==1){
-                    Node newNode=new Node(data);
+                    Node1 newNode=new Node1(data);
                     temp1=temp.nextaddress;
                     newNode.prevaddress=temp;
                     temp.nextaddress=newNode;
@@ -58,7 +58,7 @@ class Doublylinkedlist{
         }
     }
     public void deleteatfirst(){
-        Node temp=head;
+        Node1 temp=head;
         if(head==null){
             System.out.println("No linked list.");
         }
@@ -70,8 +70,8 @@ class Doublylinkedlist{
         if(head==null){
             System.out.println("No Linkedlist.");
         }else{
-            Node temp=head;
-            Node temp1;
+            Node1 temp=head;
+            Node1 temp1;
             while(temp.nextaddress!=null){
                 temp=temp.nextaddress;
             }
@@ -85,7 +85,7 @@ class Doublylinkedlist{
             System.out.println("No Linkedlist.");
             return;
         }
-        Node temp,temp1,temp2;//temp for delete
+        Node1 temp,temp1,temp2;//temp for delete
         temp=head;
         temp1=null;
         temp2=null;
@@ -107,7 +107,7 @@ class Doublylinkedlist{
 
     }
     public void display(){
-        Node temp=head;
+        Node1 temp=head;
         while(temp!=null){
             System.out.print(temp.data+"\t");
             temp=temp.nextaddress;
@@ -116,7 +116,7 @@ class Doublylinkedlist{
     }
     
     public void printback(){
-        Node temp=head;
+        Node1 temp=head;
         while(temp.nextaddress!=null){
             temp=temp.nextaddress;
         }

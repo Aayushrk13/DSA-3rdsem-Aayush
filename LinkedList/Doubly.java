@@ -43,11 +43,17 @@ class Doublylinkedlist{
         Node1 temp1;
         if(temp==null){
             insertatfirst(data);
+        }else if (pos==1) {
+            insertatfirst(data);
         }else{
-            while (pos--!=0) {
+            while (--pos!=0) {
                 if(pos==1){
                     Node1 newNode=new Node1(data);
                     temp1=temp.nextaddress;
+                    if(temp1==null){
+                        insertatlast(data);
+                        break;
+                    }
                     newNode.prevaddress=temp;
                     temp.nextaddress=newNode;
                     temp1.prevaddress=newNode;
@@ -61,8 +67,10 @@ class Doublylinkedlist{
         Node1 temp=head;
         if(head==null){
             System.out.println("No linked list.");
+            return;
         }
         temp=temp.nextaddress;
+        head.nextaddress=null;
         head=temp;
         head.prevaddress=null;
     }
@@ -130,7 +138,6 @@ class Doublylinkedlist{
 public class Doubly {
     Scanner scan=new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scan=new Scanner(System.in);
         Doublylinkedlist dl=new Doublylinkedlist();
         Doubly d=new Doubly();
         int choice=0;
@@ -145,8 +152,7 @@ public class Doubly {
             System.out.println("7.Print the list from front.");
             System.out.println("8.Print the list from back.");
             System.out.println("9.Exit");
-            System.out.println("Enter your choice:");
-            choice=scan.nextInt();
+            choice=d.inputchoice();
             switch (choice) {
                 case 1:
                     dl.insertatfirst(d.input());
@@ -180,7 +186,6 @@ public class Doubly {
                     break;
             }
         }
-        scan.close();
     }
     int input(){
         System.out.println("Enter the data:");
@@ -191,5 +196,10 @@ public class Doubly {
         System.out.println("Enter the position:");
         int pos=scan.nextInt();
         return pos;
+    }
+    int inputchoice(){
+        System.out.println("Enter your choice:");
+        int choice=scan.nextInt();
+        return choice;
     }
 }

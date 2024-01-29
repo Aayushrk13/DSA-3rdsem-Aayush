@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.Singly;
 import java.util.*;
 class Node{
     int data;

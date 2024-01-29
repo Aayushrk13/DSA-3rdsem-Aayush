@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.Doubly;
 
 import java.util.Scanner;
 

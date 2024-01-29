@@ -1,4 +1,4 @@
-package LinkedList;
+package LinkedList.Circular;
 
 import java.util.Scanner;
 

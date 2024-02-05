@@ -1,10 +1,6 @@
 package LinkedList.Singly;
-<<<<<<< HEAD
-class queueusinglinkedlist{
-=======
 import java.util.*;
 public class Queue{
->>>>>>> 2a11dabeee2f67205d0241b55285553161cd3d5f
     Linkedlist l=new Linkedlist();
     public void enqueue(int data){
         l.insertAtLast(data);
@@ -15,25 +11,6 @@ public class Queue{
     public void print(){
         l.PrintList();
     }
-<<<<<<< HEAD
-    public void atfront(){
-        l.traversal(1);
-    }
-}
-public class Queue {
-    public static void main(String[] args) {
-        queueusinglinkedlist q=new queueusinglinkedlist();
-        q.enqueue(1);
-        q.enqueue(2);
-        q.enqueue(3);
-        q.enqueue(4);
-        q.print();
-        q.dequeue();
-        q.print();
-        q.atfront();
-    }
-}
-=======
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
         Queue q=new Queue();
@@ -67,4 +44,3 @@ public class Queue {
         }while(choice!=4);
     }
 }
->>>>>>> 2a11dabeee2f67205d0241b55285553161cd3d5f

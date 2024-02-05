@@ -54,8 +54,11 @@ class Linkedlist{
     }
 
     public void deletion(){//at first
-        Node temp=head.nextaddress;
-        head=temp;
+        if (head!=null){
+            head=head.nextaddress;
+        }else{
+            System.out.println("There is no Nodes.");
+        }
     }
 
     public void deleteAtBack(){

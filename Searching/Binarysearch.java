@@ -1,3 +1,4 @@
+package Searching;
 public class Binarysearch {
     public void binarysearch(int []arr,int key){
         int left_index=0;
@@ -16,7 +17,7 @@ public class Binarysearch {
         System.out.println("Key is not found");
     }
     public static void main(String[] args) {
-        int size=2;
+        int size=0;
         int arr[]={1,2,3,4,5,8,15,19,27,34};
         Binarysearch b=new Binarysearch();
         b.binarysearch(arr, size);

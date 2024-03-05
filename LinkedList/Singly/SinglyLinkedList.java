@@ -20,7 +20,7 @@ class Linkedlist{
             head=newNode;
         }
     }
-
+    
     public void insertAtLast(int data){
         Node newNode=new Node(data);
         Node temp=head;
@@ -33,7 +33,7 @@ class Linkedlist{
             temp.nextaddress=newNode;
         }
     }
-
+    
     public void insertAtSpecificpos(int data,int pos){
         Node newNode=new Node(data);//newnode making
         Node temp=head;//temp ma head
@@ -52,7 +52,7 @@ class Linkedlist{
             }
         }
     }
-
+    
     public void deletion(){//at first
         if (head!=null){
             head=head.nextaddress;
@@ -60,7 +60,7 @@ class Linkedlist{
             System.out.println("There is no Nodes.");
         }
     }
-
+    
     public void deleteAtBack(){
         Node temp=head;
         if(temp.nextaddress==null){
@@ -73,7 +73,7 @@ class Linkedlist{
         }
         temp1.nextaddress=null;
     }
-
+    
     public void deleteAtSpecificpos(int pos){
         Node temp=head;
         Node temp1=head;
@@ -93,7 +93,7 @@ class Linkedlist{
             }
         }      
     }
-
+    
     public void PrintList() { 
         Node temp=head;
         while (temp!= null) { 
@@ -103,7 +103,7 @@ class Linkedlist{
         } 
         System.out.println(); 
     }
-
+    
     public void traversal(int pos){
         Node temp=head;
         while (--pos!=0) {

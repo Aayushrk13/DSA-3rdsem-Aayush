@@ -8,14 +8,15 @@ public class Mergesort {
 
         int []left_array=new int[subarray1_size];
         int []right_array=new int [subarray2_size];
-
+        System.out.println("Left Array");
         for (int i = 0; i < left_array.length; i++) {
-            left_array[i]=arr[i];
-            System.out.println(arr[i]);
+            left_array[i]=arr[left_index+i];//[0]=1
+            System.out.println(left_array[i]);
         }
+        System.out.println("Right array");
         for (int i = 0; i < right_array.length; i++) {
-            right_array[i]=arr[mid_index+i];
-            System.out.println(arr[i]);
+            right_array[i]=arr[mid_index+i+1];
+            System.out.println(right_array[i]);
         }
         //Merge arrays
         int resarray[]=new int [arr.length];
@@ -25,15 +26,20 @@ public class Mergesort {
         int k=left_index;
         while(i<subarray1_size && j<subarray2_size)
         if(left_array[i]<right_array[j]){
-            resarray[k++]=left_array[i++];
+            arr[k++]=left_array[i++];
         }else{
-            resarray[k++]=right_array[j++];
+            arr[k++]=right_array[j++];
         }
         while(i<subarray1_size){
-            resarray[k++]=left_array[i++];
+            arr[k++]=left_array[i++];
         }
         while(j<subarray2_size){
-            resarray[k++]=right_array[j++];
+            arr[k++]=right_array[j++];
+        }
+        System.out.println("resarray");
+        for (int k2 = 0; k2 < resarray.length; k2++) {
+            resarray[k2]=arr[k2];
+            System.out.println(resarray[k2]);
         }
     }
     void sort(int []arr,int left_index,int right_index){
@@ -52,7 +58,7 @@ public class Mergesort {
     }
     public static void main(String[] args) {
         Mergesort ob=new Mergesort();
-        int []arr={1,2,5,4,3};
+        int []arr={1,8,7,5,2,4,3,6,9};
         ob.mergesort(arr);
     }
 }

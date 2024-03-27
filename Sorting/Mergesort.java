@@ -24,12 +24,13 @@ public class Mergesort {
         int i=0;
         int j=0;
         int k=left_index;
-        while(i<subarray1_size && j<subarray2_size)
-        if(left_array[i]<right_array[j]){
-            arr[k++]=left_array[i++];
-        }else{
-            arr[k++]=right_array[j++];
-        }
+        while(i<subarray1_size && j<subarray2_size){
+            if(left_array[i]<right_array[j]){
+                arr[k++]=left_array[i++];
+            }else{
+                arr[k++]=right_array[j++];
+            }
+        }    
         while(i<subarray1_size){
             arr[k++]=left_array[i++];
         }
